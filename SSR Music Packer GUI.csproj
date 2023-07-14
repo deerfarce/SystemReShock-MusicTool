@@ -1,0 +1,132 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>SSR_Music_Packer_GUI</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>UI\icon.ico</ApplicationIcon>
+    <Title>System ReShock Music Tool</Title>
+    <PackageProjectUrl>https://www.nexusmods.com/systemshock2023/mods/78</PackageProjectUrl>
+    <PackageId>$(AssemblyName)</PackageId>
+  </PropertyGroup>
+	
+  <PropertyGroup>
+  	<AssemblyName>System ReShock Music Tool</AssemblyName>
+  	<Copyright>copyright © dreamvirtual @ nexusmods 2023</Copyright>
+  </PropertyGroup>
+	
+  <ItemGroup>
+    <None Remove="assets\BP_MusicCue_Elevator.uasset" />
+    <None Remove="assets\BP_MusicCue_Elevator.uexp" />
+    <None Remove="assets\Cinematic_Intro_Music_v3.uasset" />
+    <None Remove="assets\Cinematic_Intro_Music_v3.uexp" />
+    <None Remove="assets\DT_LevelMusic.uasset" />
+    <None Remove="assets\DT_LevelMusic.uexp" />
+    <None Remove="assets\DT_MusicLayers_Elevator.uasset" />
+    <None Remove="assets\DT_MusicLayers_Elevator.uexp" />
+    <None Remove="assets\Elevator_v1_2.uasset" />
+    <None Remove="assets\Elevator_v1_2.uexp" />
+    <None Remove="assets\Mix_OpenMFD.uasset" />
+    <None Remove="assets\Mix_OpenMFD.uexp" />
+    <None Remove="assets\Music.uasset" />
+    <None Remove="assets\Music.uexp" />
+    <None Remove="assets\MX_Elevator.uasset" />
+    <None Remove="assets\MX_Elevator.uexp" />
+    <None Remove="assets\__Do not edit these__" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="UI\icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="assets\BP_MusicCue_Elevator.uasset">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="assets\BP_MusicCue_Elevator.uexp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="assets\Cinematic_Intro_Music_v3.uasset">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="assets\Cinematic_Intro_Music_v3.uexp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="assets\DT_LevelMusic.uasset">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="assets\DT_LevelMusic.uexp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="assets\DT_MusicLayers_Elevator.uasset">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="assets\DT_MusicLayers_Elevator.uexp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="assets\Elevator_v1_2.uasset">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="assets\Elevator_v1_2.uexp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="assets\Mix_OpenMFD.uasset">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="assets\Mix_OpenMFD.uexp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="assets\Music.uasset">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="assets\Music.uexp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="assets\MX_Elevator.uasset">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="assets\MX_Elevator.uexp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="assets\__Do not edit these__">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft-WindowsAPICodePack-Shell" Version="1.1.5" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="NVorbis" Version="0.10.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="UAssetAPI">
+      <HintPath>lib\UAssetAPI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="lib\UAssetAPI.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
